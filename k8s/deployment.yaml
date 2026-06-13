@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fintech-microservice
+  labels:
+    app: fintech-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fintech-microservice
+  template:
+    metadata:
+      labels:
+        app: fintech-microservice
+    spec:
+      containers:
+        - name: fintech-microservice
+          image: <mpmeghana>/fintech-microservice:v1
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"
