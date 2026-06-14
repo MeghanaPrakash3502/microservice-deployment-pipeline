@@ -1,6 +1,6 @@
 const request = require('supertest');
 const app = require('../app');
-
+// Jenkins Poll SCM Test
 describe('GET /', () => {
   it('should return status 200 and a message', async () => {
     const res = await request(app).get('/');
