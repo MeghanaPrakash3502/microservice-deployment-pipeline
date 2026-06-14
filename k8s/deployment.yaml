@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: fintech-microservice
-          image: <mpmeghana>/fintech-microservice:v1
+          image: fintech-microservice:v1
+          imagePullPolicy: Never
           ports:
             - containerPort: 3000
           resources:

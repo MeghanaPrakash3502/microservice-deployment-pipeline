@@ -5,7 +5,7 @@ describe('GET /', () => {
   it('should return status 200 and a message', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
-    expect(res.body.message).toBe('Microservice is running!');
+    expect(res.body.message).toBe('Microservice is running successfully!');
   });
 });
 
